@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        #xBTN:hover{
+            font-weight: 800;
+            color: red !important;
+            cursor: pointer;
+        }
+        #logBtn{
+            border: none;
+            border-radius: 5px;
+            padding: 0px 10px;
+            background-color: transparent;
+            color: white;
+        }
+        #logBtn:hover{
+            color: black;
+            cursor: pointer;
+            border: none;
+        }
+        td{
+            text-align: center !important;
+        }
+        th{
+            background-color: gray !important;
+            color: white;
+        }
+        input:focus{
+            outline: none;
+            border-bottom: solid blue;
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="w3-bar w3-gray">
+        <div class="w3-bar=item">
+            <h2 style=" color: white; padding-left: 2%;  padding-right: 2%;font-style:italic; font-weight: 700">User Management 
+                <button id="logBtn" class=" w3-right">Logout</button>
+            </h2>
+        </div>
+    </div>
+    <div class="w3-container" style="width: 80%; margin: auto;">
+        <br><button id="userButton" class="w3-button w3-blue w3-right">+ADD</button>
+        <table class="w3-table-all"  style="margin-top: 5%;" id="table">
+            <thead>
+                <tr>
+                    <th style="text-align: center;">Username</th>   
+                    <th style="text-align: center;">Password</th>
+                </tr>
+            </thead>
+            <tbody id="tbody" style="margin:auto">
+
+            </tbody>
+        </table>
+    </div>
+    <!--MODAL-->
+    <div class="w3-modal " id="userModal">
+        <div  style="width: 450px; border-radius: 5% !important;" class="w3-modal-content">
+            <div class="w3-bar w3-blue w3-card-4">
+                <button id="xBTN" style="margin-top: 2%; margin-right: 2%" class="w3-button w3-right">X</button>
+                <div class="w3-bar-item">
+                    <h2 style="font-weight: 700;">ADD USER</h2>
+                </div>
+            </div><br>
+            <div id="thirdParentDiv" style="padding-bottom: 5% !important;" class="w3-container">
+                <input type="text" style="padding: 10px 20px !important; width: 70% !important; margin: auto;" id="addUser" class="w3-input" placeholder="username">
+                <input type="password" style="padding: 10px 20px !important; width: 70% !important; margin: auto;" id="addPass" class="w3-input" placeholder="password">
+                <br>
+                <button id="submitBtn" class="w3-button w3-blue w3-right">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="assets/javascript.js"></script>
+</body>
+</html>

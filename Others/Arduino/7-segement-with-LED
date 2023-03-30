@@ -1,0 +1,134 @@
+byte pins[] ={2,3,4,5,6,7,8,9};
+byte zero[] = {2,3,4,5,6,7,0,9};
+byte one[] = {0,3,4,0,0,0,0,9};
+byte two[] = {2,3,0,5,6,0,8,9};
+byte three[] = {2,3,4,5,0,0,8,9};
+byte four[] = {0,3,4,0,0,7,8,9};
+byte five[] = {2,0,4,5,0,7,8,9};
+byte six[] = {2,0,4,5,6,7,8,9};
+byte seven[] = {2,3,4,0,0,0,0,9};
+byte eight[] = {2,3,4,5,6,7,8,9};
+byte nine[] = {2,3,4,0,0,7,8,9};
+byte ten[] = {2,3,4,0,6,7,8,9};//Represents A
+byte eleven[] = {2,3,4,5,6,7,8,9};//Represents B
+byte twelve[] = {2,0,0,5,6,7,0,9};//Represents C
+byte thirteen[] = {2,3,4,5,6,7,0,9};//Represents D
+byte fourteen[] = {2,0,0,5,6,7,8,9};//Represents E
+byte fifteen[] = {2,0,0,0,6,7,8,9};//Represents F
+
+//PIN FOR LED LIGHTS
+byte bPins[] = {10,11,12,13};
+//Binaries 0-F
+byte binaries[] = {1,1,1,1};//REPRESENTS my bPins
+byte binaryOne[] = {0,0,0,1};
+byte binaryTwo[] = {0,0,1,0};
+byte binaryThree[] = {0,0,1,1};
+byte binaryFour[] = {0,1,0,0};
+byte binaryFive[] = {0,1,0,1};
+byte binarySix[] = {0,1,1,0};
+byte binarySeven[] = {0,1,1,1};
+byte binaryEight[] ={1,0,0,0};
+byte binaryNine[] = {1,0,0,1};
+byte binaryTen[] = {1,0,1,0};
+byte binaryEleven[] = {1,0,1,1};
+byte binaryTwelve[] = {1,1,0,0};
+byte binaryThirteen[] = {1,1,0,1};
+byte binaryFourteen[] = {1,1,1,0};
+byte binaryFifteen[] = {1,1,1,1};
+
+
+void setup(){
+  for(int i =0; i <= sizeof(pins);i++){
+  	pinMode(pins[i], OUTPUT);
+  }
+  for(int j=0;j<=sizeof(bPins);j++){
+  	pinMode(bPins[j], OUTPUT);
+  }
+}
+int count =0;
+void loop(){
+  switch(count){
+  	case 0:
+    	doSomething(zero);//zeroDisplay();
+    	binaryLight(binaryOne);
+    	break;
+    case 1:
+    	doSomething(one);//oneDisplay();
+    	binaryLight(binaryOne);
+    	break;
+    case 2:
+    	doSomething(two);//twoDisplay();
+    	binaryLight(binaryTwo);
+    	break;
+    case 3:
+    	doSomething(three);//threeDisplay();
+    	binaryLight(binaryThree);
+    	break;
+   	case 4:
+    	doSomething(four);//fourDisplay();
+    	binaryLight(binaryFour);
+    	break;
+    case 5:
+    	doSomething(five);
+    	binaryLight(binaryFive);
+    	break;
+    case 6:
+    	doSomething(six);
+    	binaryLight(binarySix);
+    	break;
+    case 7:
+    	doSomething(seven);//sevenDisplay();
+    	binaryLight(binarySeven);
+    	break;
+    case 8:
+    	doSomething(eight);//eightDisplay();
+    	binaryLight(binaryEight);
+    	break;
+    case 9:
+    	doSomething(nine);//nineDisplay();
+    	binaryLight(binaryNine);
+    	break;
+    case 10:
+    	doSomething(ten);//tenDisplay();
+    	binaryLight(binaryTen);
+    	break;
+    case 11:
+    	doSomething(eleven);//elevenDisplay();
+    	binaryLight(binaryEleven);
+    	break;
+    case 12:
+    	doSomething(twelve);//twelveDisplay();
+    	binaryLight(binaryTwelve);
+    	break;
+    case 13:
+    	doSomething(thirteen);//thirteenDisplay();
+    	binaryLight(binaryThirteen);
+    	break;
+    case 14:
+    	doSomething(fourteen);//fourteenDisplay();
+    	binaryLight(binaryFourteen);
+    	break;
+    case 15:
+    	doSomething(fifteen);//fifteenDisplay();
+    	binaryLight(binaryFifteen);
+    	break;
+  }
+  if(count <16){count++; delay(1000);}
+  if(count ==16){count=0; delay(1000);}
+}
+void doSomething(byte arr[]){
+  for(int i =0; i< sizeof(pins);i++){
+    if(pins[i] == arr[i]){
+    	digitalWrite(pins[i], HIGH);
+    }
+    else{
+    	digitalWrite(pins[i], LOW);
+    }
+  }
+}
+void binaryLight(byte arr[]){
+  for(int i=0;i<sizeof(binaries); i++){
+    if(binaries[i] == arr[i]){digitalWrite(bPins[i], HIGH);}
+    else{digitalWrite(bPins[i], LOW);}
+  }
+}

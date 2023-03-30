@@ -1,0 +1,88 @@
+byte pins[] ={2,3,4,5,6,7,8,9};
+byte zero[] = {2,3,4,5,6,7,0,9};
+byte one[] = {0,3,4,0,0,0,9};
+byte two[] = {2,3,0,5,6,0,8,0};
+byte three[] = {2,3,4,5,0,0,8,9};
+byte four[] = {0,3,4,0,0,7,8,9};
+byte five[] = {2,0,4,5,0,7,8,9};
+byte six[] = {2,0,4,5,6,7,8,9};
+byte seven[] = {2,3,4,0,0,0,0,9};
+byte eight[] = {2,3,4,5,6,7,8,9};
+byte nine[] = {2,3,4,0,0,7,8,9};
+byte ten[] = {2,3,4,0,6,7,8,9};//Represents A
+byte eleven[] = {2,3,4,5,6,7,8,9};//Represents B
+byte twelve[] = {2,0,0,5,6,7,0,9};//Represents C
+byte thirteen[] = {2,3,4,5,6,7,0,9};//Represents D
+byte fourteen[] = {2,0,0,5,6,7,8,9};//Represents E
+byte fifteen[] = {2,0,0,0,6,7,8,9};//Represents F
+
+void setup(){
+  for(int i =0; i <= sizeof(pins);i++){
+  	pinMode(pins[i], OUTPUT);
+  }
+}
+int count =0;
+void loop(){
+  switch(count){
+  	case 0:
+    	doSomething(zero);//zeroDisplay();
+    	break;
+    case 1:
+    	doSomething(one);//oneDisplay();
+    	break;
+    case 2:
+    	doSomething(two);//twoDisplay();
+    	break;
+    case 3:
+    	doSomething(three);//threeDisplay();
+    	break;
+   	case 4:
+    	doSomething(four);//fourDisplay();
+    	break;
+    case 5:
+    	doSomething(five);;
+    	break;
+    case 6:
+    	doSomething(six);
+    	break;
+    case 7:
+    	doSomething(seven);//sevenDisplay();
+    	break;
+    case 8:
+    	doSomething(eight);//eightDisplay();
+    	break;
+    case 9:
+    	doSomething(nine);//nineDisplay();
+    	break;
+    case 10:
+    	doSomething(ten);//tenDisplay();
+    	break;
+    case 11:
+    	doSomething(eleven);//elevenDisplay();
+    	break;
+    case 12:
+    	doSomething(twelve);//twelveDisplay();
+    	break;
+    case 13:
+    	doSomething(thirteen);//thirteenDisplay();
+    	break;
+    case 14:
+    	doSomething(fourteen);//fourteenDisplay();
+    	break;
+    case 15:
+    	doSomething(fifteen);//fifteenDisplay();
+    	break;
+  }
+  if(count <16){count++; delay(1000);}
+  if(count ==16){count=0; delay(1000);}
+}
+void doSomething(byte arr[]){
+  for(int i =0; i< sizeof(pins);i++){
+    if(pins[i] == arr[i]){
+    	digitalWrite(pins[i], HIGH);
+    }
+    else{
+    	digitalWrite(pins[i], LOW);
+    }
+  }
+}

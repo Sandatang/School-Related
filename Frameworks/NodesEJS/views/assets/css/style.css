@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+.nav-section{
+    background-color: #cccccc;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+li{
+    list-style: none;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    padding-right: 10%;
+    font-size: 20px;
+}
+#btnLogout{
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+.nav-branding{
+    font-size: 3rem;
+    font-style: italic;
+    color: #fc7a3e;
+    padding-left: 10%;
+    font-weight: 600;
+}
+.nav-link{
+    transition: 0.7 ease;
+}
+.nav-link:hover{
+    color: #d9d9d9;
+}
+
+/*HAMBUGER MENU*/
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+@media(max-width:768px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s ease-in-out;
+        font-size: 20px;
+        border-radius: 10px;
+    }
+    .menuicon{
+        margin: 10px 0;
+    }
+    .nav-menu.active{
+        right: 0;
+    }
+    .nav-branding{
+        font-size: 2rem;
+        font-style: italic;
+        font-weight: 300;
+    }
+
+    .col{
+        display: flex;
+        flex-direction: column-reverse;     
+    }
+    
+    .col2 h2, h3, p{
+        font-size: 20px !important;
+    }
+    .col2{
+        margin: 4% 5% 4% 2% !important;
+    }
+    #fambg{ 
+        height: 100% !important;
+        padding-top: 15% !important;
+    }
+    .aside-section{
+        top: 10%;
+    }
+}

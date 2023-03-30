@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJS</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <header class="nav-section">
+        <nav class="navbar">
+            <a href="" class="nav-branding">Abad Family</a>
+            <ul class="nav-menu" id="nav-id">
+                <li class="menuicon">
+                    <a href="" class="nav-link">Grand Parent's</a>
+                </li>
+                <li class="menuicon">
+                    <a href="" class="nav-link">Parent's</a>
+                </li>
+                <li class="menuicon">
+                    <a href="" class="nav-link">Sibling's</a>
+                </li>
+                <li class="menuicon">
+                    <a href="" class="nav-link">History</a>
+                </li>
+                <li class="menuicon">
+                    <a href="" class="nav-link">Developer</a>
+                </li>
+            </ul>
+            <form action="/logout?_method=DELETE" method="POST">
+                <button id="btnLogout" type="submit">Log Out</button>
+            </form>
+            <div class="hamburger">
+                <span class="bar"></span>	
+                <span class="bar"></span     >
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <h1>Hi <%= name %></h1>
+    
+ 
+</body>
+</html> 
