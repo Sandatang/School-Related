@@ -13,6 +13,7 @@ db = mysql.connector.connect(
 
 db_pointer = db.cursor()
 
+# THIS IS REALLY MESSY!!!
 #region modules necessary for vital modules
 def does_it_exist(idno)->list:
     query = "select * from student where idno = %s"
