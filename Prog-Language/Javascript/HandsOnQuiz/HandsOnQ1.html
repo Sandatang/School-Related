@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hands On Quiz INTPROG</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body> 
+    <div class="ah">
+        <h3 id="alert">Please input your value from A to B</h3>
+    </div>
+    <form name="verify"> 
+    <div class="display">
+        <label><h3>Enter value for A:</h3></label>
+        <div class="input">
+          <input type="text" class="input" id="val1"  maxlength="1">
+          <input type="text" class="input" id="val2"  maxlength="1">
+          <input type="text" class="input" id="val3"  maxlength="1">
+          <input type="text" class="input" id="val4"  maxlength="1">
+        </div>
+    </div>
+    <div class="displayB">
+        <label><h3>Enter value for B:</h3></label>
+        <div class="input">
+            <input type="text" class="input" id="valb1"  maxlength="1">
+            <input type="text" class="input" id="valb2"   maxlength="1">
+            <input type="text" class="input" id="valb3"  maxlength="1">
+            <input type="text" class="input" id="valb4"  maxlength="1">
+        </div>
+    </div>
+    </form>
+    <!--TABLE FOR AND-->
+    <div class="tableClass">
+        <h3 style="text-align: center;">Display AND</h3>
+        <table id="table"style="width: 800px;" class="w3-table-all">
+            <thead>
+                <tr>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="valA1"></td>
+                    <td id="valB1"></td>
+                    <td class="resultVal" id="resultVal1"></td>
+                </tr>
+                <tr>
+                    <td id="valA2"></td>
+                    <td id="valB2"></td>
+                    <td class="resultVal" id="resultVal2"></td>
+                </tr>
+                <tr>
+                    <td id="valA3"></td>
+                    <td id="valB3"></td>
+                    <td class="resultVal" id="resultVal3"></td>
+                </tr>
+                <tr>
+                    <td id="valA4"></td>
+                    <td id="valB4"></td>
+                    <td class="resultVal" id="resultVal4"></td>
+                </tr>
+            </tbody>
+        </table>
+    <!--TABLE FOR OR-->
+        <h3 style="text-align: center;">Display OR</h3>
+        <table id="table"style="width: 800px;" class="w3-table-all">
+            <thead>
+                <tr>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="valOR1"></td>
+                    <td id="valORb1"></td>
+                    <td class="resultVal" id="resultOr1"></td>
+                </tr>
+                <tr>
+                    <td id="valOR2"></td>
+                    <td id="valORb2"></td>
+                    <td class="resultVal" id="resultOr2"></td>
+                </tr>
+                <tr>
+                    <td id="valOR3"></td>
+                    <td id="valORb3"></td>
+                    <td class="resultVal" id="resultOr3"></td>
+                </tr>
+                <tr>
+                    <td id="valOR4"></td>
+                    <td id="valORb4"></td>
+                    <td class="resultVal" id="resultOr4"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 style="text-align: center;">Display NOT</h3>
+        <table id="table"style="width: 800px;" class="w3-table-all">
+            <thead>
+                <tr>
+                    <th>A</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="valNOT1"></td>
+                    <td class="resultVal" id="resultNOT1"></td>
+                </tr>
+                <tr>
+                    <td id="valNOT2"></td>
+                    <td class="resultVal" id="resultNOT2"></td>
+            </tbody>
+        </table>
+    </div>
+    <script type="text/javascript" src="assets/javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Sort String</h2>
+    <input type="text" id="sortthis">
+    <button id="btnsort">Sort</button>
+    <p id="demo"></p>
+    <script>
+        const btnsort = document.getElementById('btnsort')
+        function sorting(){
+            const sortthis = document.getElementById('sortthis').value
+
+            const makeItarray = sortthis.split(' ')
+
+            Array.prototype.myCase = function(){
+                for(let i=0; i< makeItarray.length;i++){
+                    if(makeItarray[i] < makeItarray[i+1]){
+                        makeItarray.unshift(this[i])
+                    }
+                    else{
+                        if(makeItarray[i] > this[i+1]){
+                            makeItarray.push(makeItarray[i])
+                        }
+                        else{
+                            for(let j = makeItarray.length-1; j >0;i--){
+                                if(makeItarray[i] <= makeItarray[j] && makeItarray[i] >= makeItarray[j-1]){
+                                    makeItarray.splice($j,0,makeItarray[i])
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            document.getElementById('demo').innerHTML = makeItarray
+        }
+
+        btnsort.addEventListener('click', sorting())
+    </script>
+</body>
+</html>

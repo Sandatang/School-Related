@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../Practices/Falcon.jpg" width="300px" id="img"><br>
+    <button id="remove">Remove img</button>
+    <script>
+        const remove = document.getElementById('remove')
+        let test
+        function displaySet(){
+            if(test==1){
+                //document.getElementById('img').style.width = this.naturalWidth+=this.naturalWidth+'px'
+                document.getElementById('img').style.display = 'block'
+                return test=0
+            }
+            else{
+                document.getElementById('img').style.display = 'none'
+                return test=1  
+            }
+            
+        }
+        remove.addEventListener('click',displaySet)
+    </script>
+</body>
+</html>
